@@ -17,7 +17,7 @@ public class ErrorController {
 
     @GetMapping
     public ResponseEntity<String> errorhandling(){
-        return ResponseEntity.status(200).body("errorhandling");
+        return ResponseEntity.status(200).body("We caught an error ");
     }
 
     @PostMapping

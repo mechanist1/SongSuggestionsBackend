@@ -17,14 +17,14 @@ public class Song {
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long id;
     @Column(unique=true)
-public String Name ;
+public String name ;
     @Column(unique=false,nullable=false)
-public String Artist ;
+public String artist ;
     @Column(unique=false,nullable=false)
-public Date ReleaseDate ;
+public Date releaseDate ;
     @Column(unique=false,nullable=false)
-public String Genre ;
+public String genre ;
     @Column(unique=false,nullable=false)
-    public String Mood ;
+    public String mood ;
 
 }
