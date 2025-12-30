@@ -42,4 +42,16 @@ public class SongController {
         return ResponseEntity.ok(listOfSongs);
     }
 
+    @DeleteMapping
+    public ResponseEntity<String> delete(@RequestParam String songname) {
+        asyncService.deleteSongByName(songname);
+        return ResponseEntity.status(204).body("Song Deleted successfully");
+    }
+
+    @PutMapping
+    public ResponseEntity<String> update(@RequestBody Song song) {
+        asyncService.updateSong(song);
+        return ResponseEntity.status(200).body("Song Updated successfully");
+    }
+
 }

@@ -10,6 +10,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 @Slf4j
 @Service
@@ -58,4 +59,30 @@ public class AsyncService {
         }
         return listOfSongs;
     }
+    public void deleteSongByName(String songName) {
+        try {
+            songRepository.deleteSongByName(songName);
+            log.info(songName + " deleted successfully");
+        }
+        catch (Exception e) {
+            log.error(e.getMessage()+"there was an error deleting the song");
+            throw new BusinessException(e.getMessage()+"there was an error deleting the song named"+songName);
+        }
+    }
+
+    public Song updateSong(Song song) {
+        Long id = song.getId();
+
+        Song existing = songRepository.findById(id)
+                .orElseThrow(() -> new BusinessException("Song not found with id " + id));
+
+        existing.setName(song.getName());
+        existing.setArtist(song.getArtist());
+        existing.setGenre(song.getGenre());
+        existing.setMood(song.getMood());
+        existing.setReleaseDate(song.getReleaseDate());
+
+        return songRepository.save(existing);
+    }
+
 }
