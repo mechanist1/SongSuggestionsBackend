@@ -1,7 +1,7 @@
 package org.example.apitestingwitherrorthrowing.Controllers;
 
 
-import org.example.apitestingwitherrorthrowing.Entities.PlayListCreateRequest;
+import org.example.apitestingwitherrorthrowing.Dtos.PlayListCreateRequest;
 import org.example.apitestingwitherrorthrowing.Entities.Playlist;
 import org.example.apitestingwitherrorthrowing.Services.PlayListService;
 import org.springframework.http.ResponseEntity;

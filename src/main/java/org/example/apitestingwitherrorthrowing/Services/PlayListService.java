@@ -1,7 +1,7 @@
 package org.example.apitestingwitherrorthrowing.Services;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.apitestingwitherrorthrowing.Entities.PlayListCreateRequest;
+import org.example.apitestingwitherrorthrowing.Dtos.PlayListCreateRequest;
 import org.example.apitestingwitherrorthrowing.Entities.Playlist;
 import org.example.apitestingwitherrorthrowing.Entities.Song;
 import org.example.apitestingwitherrorthrowing.Entities.User;

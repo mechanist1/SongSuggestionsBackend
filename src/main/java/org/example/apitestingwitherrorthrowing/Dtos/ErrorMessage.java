@@ -1,4 +1,4 @@
-package org.example.apitestingwitherrorthrowing.Entities;
+package org.example.apitestingwitherrorthrowing.Dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
